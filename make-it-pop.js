@@ -13,7 +13,7 @@ var popcornContainer,
 		
 window.onload = function() {
 	// Preload assets
-	new Image().src=popcornMP3;
+	new Audio().src=popcornMP3;
 	for(var i in popcornImages) {
 		new Image().src= popcornImages[i];
 	}
