@@ -1,7 +1,6 @@
 var popcornContainer,
 		popcornImages = [
 			'https://raw.github.com/joemckie/popcorn/master/assets/popcorn.png', 
-			'https://raw.github.com/joemckie/popcorn/master/assets/popcorn2.png',
 		],
 		popcornMP3 = 'https://raw.github.com/joemckie/popcorn/master/assets/popcorn.mp3',
 		popcornSong = '<object data='+popcornMP3+' type="audio/mp3" width=0 height=0><param name=autostart value="true"><param name="hidden" value="true"></object>';
@@ -9,13 +8,12 @@ var popcornContainer,
 window.onload = function() {
 	new Image().src=popcornMP3;
 	new Image().src='https://raw.github.com/joemckie/popcorn/master/assets/popcorn.png';
-	new Image().src='https://raw.github.com/joemckie/popcorn/master/assets/popcorn2.png';
 }		
 		
 function addPopcorn() {
 	setTimeout(function() {
 		var popcorn 						= document.createElement('img'), // Add popcorn
-				randomImage 				= Math.floor(Math.random() * 2),
+				randomImage 				= Math.floor(Math.random()),
 				positionTop					= Math.floor(Math.random() * document.documentElement.clientHeight),
 				positionLeft				= Math.floor(Math.random() * document.body.clientWidth),
 				rotation						= Math.floor(Math.random() * 360);
