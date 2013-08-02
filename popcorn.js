@@ -1,3 +1,9 @@
+/*
+	Popcorn.js
+	For a site that pops!
+	Brought to you by Joe McKie (http://joemck.ie/) and BluthCompany (http://bluth.is)
+*/
+
 var popcornContainer,
 		popcornImages = [
 			'https://raw.github.com/joemckie/popcorn/master/assets/popcorn.png', 
