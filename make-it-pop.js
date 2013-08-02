@@ -51,7 +51,7 @@ var success = function() {
 	popcornContainer.style.left=0;
 	popcornContainer.style.height="100%";
 	popcornContainer.style.width="100%";
-	popcornContainer.style.zIndex="100000";
+	popcornContainer.style.zIndex="10000";
 	
 	// Load via HTML5 audio if supported.
 	var audio = new Audio();
