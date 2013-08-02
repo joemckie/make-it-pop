@@ -7,7 +7,7 @@ var popcornContainer,
 		popcornSong = '<object data='+popcornMP3+' type="audio/mp3" width=0 height=0><param name=autostart value="true"><param name="hidden" value="true"></object>';
 		
 window.onload = function() {
-	new Image().src=popcornSong;
+	new Image().src=popcornMP3;
 	new Image().src='https://raw.github.com/joemckie/popcorn/master/assets/popcorn.png';
 	new Image().src='https://raw.github.com/joemckie/popcorn/master/assets/popcorn2.png';
 }		
