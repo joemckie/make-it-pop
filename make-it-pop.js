@@ -9,7 +9,7 @@ var popcornContainer,
 			'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.png', 
 		],
 		popcornMP3 = 'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.mp3',
-		popcornSong = '<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
+		popcornSong = '<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" type="audio/mpeg" />';
 		
 window.onload = function() {
 	// Preload assets
