@@ -8,8 +8,7 @@ var popcornContainer,
 		popcornImages = [
 			'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.png', 
 		],
-		popcornMP3 = 'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.mp3',
-		popcornSong = '<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
+		popcornMP3 = 'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.mp3';
 		
 window.onload = function() {
 	// Preload assets
@@ -54,13 +53,14 @@ var success = function() {
 	popcornContainer.style.width="100%";
 	popcornContainer.style.zIndex="100000";
 	
-	// Load in the HTML5 Audio
+	// Load via HTML5 audio if supported.
 	var audio = new Audio();
 	if(audio.canPlayType('audio/mpeg') == "maybe"){
 		audio.autoplay = true;
+		audio.loop = true;
 		audio.src=popcornMP3;
 		audio.load();
-	}else{
+	}else{ // Or fallback to the old embed style.
 		popcornContainer.innerHTML='<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
 	}
 
