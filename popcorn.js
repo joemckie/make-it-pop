@@ -6,6 +6,7 @@ var popcornContainer,
 		popcornSong = '<object data='+popcornMP3+' type="audio/mp3" width=0 height=0><param name=autostart value="true"><param name="hidden" value="true"></object>';
 		
 window.onload = function() {
+	// Preload assets
 	new Image().src=popcornMP3;
 	new Image().src='https://raw.github.com/joemckie/popcorn/master/assets/popcorn.png';
 }		
@@ -49,8 +50,6 @@ var success = function() {
 	popcornContainer.innerHTML=popcornSong;
 	document.body.appendChild(popcornContainer);
 	
-	setTimeout(function() {
-		addPopcorn();
-	}, 222); // synchronise BPM
+	addPopcorn();
 }
 var konami = new Konami(success);
