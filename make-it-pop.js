@@ -8,8 +8,7 @@ var popcornContainer,
 		popcornImages = [
 			'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.png', 
 		],
-		popcornMP3 = 'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.mp3',
-		popcornSong = '<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
+		popcornMP3 = 'https://raw.github.com/joemckie/make-it-pop/master/assets/popcorn.mp3';
 		
 window.onload = function() {
 	// Preload assets
@@ -52,10 +51,20 @@ var success = function() {
 	popcornContainer.style.left=0;
 	popcornContainer.style.height="100%";
 	popcornContainer.style.width="100%";
-	popcornContainer.style.zIndex="100000";
+	popcornContainer.style.zIndex="10000";
 	
+	// Load via HTML5 audio if supported.
+	var audio = new Audio();
+	if(audio.canPlayType('audio/mpeg') == "maybe"){
+		audio.autoplay = true;
+		audio.loop = true;
+		audio.src=popcornMP3;
+		audio.load();
+	}else{ // Or fallback to the old embed style.
+		popcornContainer.innerHTML='<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
+	}
+
 	// add elements to body
-	popcornContainer.innerHTML=popcornSong;
 	document.body.appendChild(popcornContainer);
 	
 	addPopcorn();
