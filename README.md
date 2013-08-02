@@ -1,5 +1,5 @@
-make-it-pop.js
-==============
+"Make it Pop"
+=============
 
 Designers hate when clients ask for a site that 'pops'. Well, now you can deliver!
 
