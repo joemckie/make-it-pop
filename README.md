@@ -1,4 +1,9 @@
-popcorn
+Popcorn.js
+==========
+
+Designers hate when clients ask for a site that 'pops'. Well, now you can!
+
+Made by
 =======
 
-popcorn.js - For sites with that extra 'pop'.
+Brought to you by [Joe McKie](http://joemck.ie/) and 
