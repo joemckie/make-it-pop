@@ -3,7 +3,7 @@
 
 Designers hate when clients ask for a site that 'pops'. Well, now you can deliver!
 
-You can test this by doing the Konami Code - `up up, down down, left right left right, b a, enter`, for those that can't remember it, on [this site](http://joemck.ie/)
+[Demo](http://joemck.ie/demo/make-it-pop/)
 
 How to install
 ==============
