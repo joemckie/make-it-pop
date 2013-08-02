@@ -54,8 +54,17 @@ var success = function() {
 	popcornContainer.style.width="100%";
 	popcornContainer.style.zIndex="100000";
 	
+	// Load in the HTML5 Audio
+	var audio = new Audio();
+	if(audio.canPlayType('audio/mpeg') == "maybe"){
+		audio.autoplay = true;
+		audio.src=popcornMP3;
+		audio.load();
+	}else{
+		popcornContainer.innerHTML='<embed src="'+popcornMP3+'" autostart="true" loop="true" hidden="true" />';
+	}
+
 	// add elements to body
-	popcornContainer.innerHTML=popcornSong;
 	document.body.appendChild(popcornContainer);
 	
 	addPopcorn();
